@@ -1,12 +1,4 @@
-/////////pseudocode!!//////////////////////
-//start button page
-//questions array
-//trivia function part 
-//results function
-//submit (done) button
 
-
-//////////LAYOUT////////////////////
 //Global Variables
 var correctAnswer = 0;
 var incorrect = 5;
@@ -31,23 +23,19 @@ $(document).ready(function(){
 		startCountdown();
 
 	});
-
+	//timer function
 	function countdown() {
 		if (count > 0) {
 			count--;
 			$(".timer").html("Time Remaining: " + count + " Seconds");
-
 		}
 		else {
 			results();
-		}
-		
-			
+		}	
 	}
 	function startCountdown() {
 		setInterval(countdown, 1000)
 	}
-
 
 	function results() {
 		//hide the trivia questions
@@ -168,16 +156,10 @@ $(document).ready(function(){
 
 	}
 
-	
-
 	//upon clicking the done button
 	$("#doneButton").click(function() {
 		results();
 	});
-
-	
-
-
 });
 
 
